@@ -6,8 +6,8 @@
 
 [ºÎ½ºÆ®Ä·ÇÁ]: http://boostcamp.connect.or.kr/
 
-'''java
-System.out.println("df");
-'''
+```java
+System.out.println("Boost Camp");
+```
 
 
