@@ -69,7 +69,6 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         mVisualizerView.setColor(sharedPreferences.getString(getString(R.string.pref_color_key),
                 getString(R.string.pref_color_red_value)));
     }
-
     // Updates the screen if the shared preferences change. This method is required when you make a
     // class implement OnSharedPreferenceChangedListener
     @Override

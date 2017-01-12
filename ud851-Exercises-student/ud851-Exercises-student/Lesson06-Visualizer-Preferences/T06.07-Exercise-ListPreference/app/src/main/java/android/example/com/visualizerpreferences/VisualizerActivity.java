@@ -33,6 +33,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+
 public class VisualizerActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int MY_PERMISSION_RECORD_AUDIO_REQUEST_CODE = 88;
@@ -47,7 +49,6 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         setupSharedPreferences();
         setupPermissions();
     }
-
     // TODO (4) Update setupSharedPreferences and onSharedPreferenceChanged to load the color
     // from shared preferences. Call setColor, passing in the color you got
     private void setupSharedPreferences() {
@@ -61,6 +62,7 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
                 getResources().getBoolean(R.bool.pref_show_treble_default)));
         mVisualizerView.setMinSizeScale(1);
         mVisualizerView.setColor(getString(R.string.pref_color_red_value));
+        mVisualizerView.setColor("color");
         // Register the listener
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }

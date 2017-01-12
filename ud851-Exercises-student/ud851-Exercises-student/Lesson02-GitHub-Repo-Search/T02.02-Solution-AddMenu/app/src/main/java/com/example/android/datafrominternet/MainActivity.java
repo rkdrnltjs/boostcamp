@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // COMPLETED (8) Override onCreateOptionsMenu
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // COMPLETED (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu

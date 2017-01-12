@@ -37,7 +37,7 @@ import android.widget.TextView;
  */
 public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
-    // TODO (1) Create a layout resource in res/layout/ called number_list_item.xml
+    //  TODO (1) Create a layout resource in res/layout/ called number_list_item.xml
 
     // Do steps 2 - 11 within number_list_item.xml
     // TODO (2) Make the root layout a FrameLayout
@@ -119,6 +119,20 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
     // TODO (12) Create a class called NumberViewHolder that extends RecyclerView.ViewHolder
 
+    class NumberViewHolder extends RecyclerView.ViewHolder {
+        TextView listItemNumberView;
+
+        public NumberViewHolder(View itemView) {
+            super(itemView);
+
+            listItemNumberView = (TextView) itemView.findViewById(R.id.tv_item_number);
+        }
+
+        void bind(int listIndex) {
+            listItemNumberView.setText(String.valueOf(listIndex));
+        }
+    }
+
     // TODO (13) Within NumberViewHolder, create a TextView variable called listItemNumberView
 
     // TODO (14) Create a constructor for NumberViewHolder that accepts a View called itemView as a parameter
@@ -129,4 +143,4 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     // TODO (18) Be careful to get the String representation of listIndex, as using setText with an int does something different
 
     }
-}
+

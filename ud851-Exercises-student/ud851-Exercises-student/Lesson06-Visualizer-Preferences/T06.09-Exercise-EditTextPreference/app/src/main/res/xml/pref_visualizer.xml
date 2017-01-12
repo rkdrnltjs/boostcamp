@@ -32,5 +32,11 @@
         android:entryValues="@array/pref_color_option_values"
         android:key="@string/pref_color_key"
         android:title="@string/pref_color_label" />
+    <EditTextPreference
+        android:defaultValue="Default value"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference"
+        android:key="edit_text_preference_1" />
 
 </PreferenceScreen>
